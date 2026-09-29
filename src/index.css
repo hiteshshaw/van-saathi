@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: #FAF7F2;
+    color: #1A251E;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Subtle tribal geometric divider pattern */
+.tribal-border-top {
+  background-image: radial-gradient(#C84C32 1.5px, transparent 1.5px), radial-gradient(#2D6A4F 1.5px, #FAF7F2 1.5px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+.tribal-accent-bar {
+  background: repeating-linear-gradient(
+    45deg,
+    #1B4332,
+    #1B4332 8px,
+    #C84C32 8px,
+    #C84C32 16px,
+    #DDA15E 16px,
+    #DDA15E 24px
+  );
+}
+
+.tribal-subtle-pattern {
+  background-image: linear-gradient(135deg, rgba(27, 67, 50, 0.04) 25%, transparent 25%),
+                    linear-gradient(225deg, rgba(27, 67, 50, 0.04) 25%, transparent 25%),
+                    linear-gradient(45deg, rgba(27, 67, 50, 0.04) 25%, transparent 25%),
+                    linear-gradient(315deg, rgba(27, 67, 50, 0.04) 25%, #FAF7F2 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  background-repeat: repeat;
+}
+
+/* Audio waveform animation */
+@keyframes wavePulse {
+  0%, 100% { height: 6px; }
+  50% { height: 28px; }
+}
+
+.animate-wave-1 { animation: wavePulse 0.8s ease-in-out infinite 0.1s; }
+.animate-wave-2 { animation: wavePulse 0.8s ease-in-out infinite 0.3s; }
+.animate-wave-3 { animation: wavePulse 0.8s ease-in-out infinite 0.2s; }
+.animate-wave-4 { animation: wavePulse 0.8s ease-in-out infinite 0.4s; }
+.animate-wave-5 { animation: wavePulse 0.8s ease-in-out infinite 0.15s; }
+.animate-wave-6 { animation: wavePulse 0.8s ease-in-out infinite 0.35s; }
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #B7E4C7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52B788;
+}
